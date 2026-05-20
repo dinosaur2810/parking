@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park-In - ParkEase</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="form-card">
+    <h2>Create Parking Ticket</h2>
+    <form id="parkInForm" class="admin-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label>Ticket Number (Auto-generated)</label>
+                <input type="text" id="ticketNumber" class="form-input" readonly>
+            </div>
+            <div class="form-group">
+                <label>Time In (Auto-generated)</label>
+                <input type="text" id="timeIn" class="form-input" readonly>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Plate Number *</label>
+                <input type="text" id="plateNumber" class="form-input" placeholder="ABC-1234" required>
+            </div>
+            <div class="form-group">
+                <label>Vehicle Type *</label>
+                <select id="vehicleType" class="form-input" required>
+                    <option value="">Select Type</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="SUV">SUV</option>
+                    <option value="Truck">Truck</option>
+                    <option value="Van">Van</option>
+                    <option value="Motorcycle">Motorcycle</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Parking Slot *</label>
+                <select id="slotNumber" class="form-input" required>
+                    <option value="">Select Slot</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Owner Name *</label>
+                <input type="text" id="ownerName" class="form-input" placeholder="John Doe" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Parking Fee (Fixed)</label>
+                <input type="text" id="parkingFee" class="form-input" value="₱50" readonly>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-check-circle"></i> Create Ticket
+            </button>
+            <button type="reset" class="btn btn-secondary">
+                <i class="fas fa-redo"></i> Reset
+            </button>
+        </div>
+    </form>
+</div>
+
+    <script src="dashboard.js"></script>
+    <script src="park-in.js"></script>
+</body>
+</html>

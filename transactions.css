@@ -1,0 +1,139 @@
+/* Transactions Styling */
+
+.transactions-header {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.transactions-header h2 {
+    color: #333;
+    font-size: 22px;
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
+}
+
+.transaction-filters {
+    flex: 1;
+    min-width: 250px;
+}
+
+.transaction-filters .form-input {
+    width: 100%;
+}
+
+.table-responsive {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.data-table th {
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+}
+
+.data-table tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.data-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.data-table td {
+    padding: 15px 12px;
+    font-size: 14px;
+    color: #333;
+}
+
+.data-table td.empty-message {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 40px 12px;
+}
+
+/* Status badges */
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.status-badge.completed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-badge.pending-checkout {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .transactions-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .transactions-header h2 {
+        width: 100%;
+    }
+    
+    .transaction-filters {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        padding: 15px;
+    }
+    
+    .data-table {
+        font-size: 12px;
+    }
+    
+    .data-table th,
+    .data-table td {
+        padding: 12px 8px;
+    }
+    
+    .transactions-header {
+        padding: 15px;
+    }
+}

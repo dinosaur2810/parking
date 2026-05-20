@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkEase - Parking Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Page 1: Login Form Section -->
+    <section class="login-section" id="loginPage">
+        <div class="login-container">
+            <!-- Left Side: Illustrations and Brand -->
+            <div class="login-left">
+                <div class="brand-section">
+                    <div class="brand-icon">
+                        <i class="fas fa-parking"></i>
+                    </div>
+                    <h1 class="brand-name">ParkEase</h1>
+                    <p class="brand-tagline">Smart Parking, Smarter You</p>
+                </div>
+                <div class="illustration-container">
+                    <div class="parking-illustration">
+                        <div class="parking-lot">
+                            <div class="parking-slot active"></div>
+                            <div class="parking-slot"></div>
+                            <div class="parking-slot active"></div>
+                            <div class="parking-slot"></div>
+                        </div>
+                        <div class="car-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Login Form -->
+            <div class="login-right">
+                <div class="login-form-container">
+                    <h2 class="form-title">Welcome Back</h2>
+                    <p class="form-subtitle">Sign in to your ParkEase account</p>
+
+                    <form class="login-form" id="loginForm">
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                <i class="fas fa-envelope"></i> Email Address
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                class="form-input" 
+                                placeholder="Enter your email"
+                                required
+                            >
+                            <div class="input-glow"></div>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="form-group">
+                            <label for="password" class="form-label">
+                                <i class="fas fa-lock"></i> Password
+                            </label>
+                            <div class="password-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    class="form-input" 
+                                    placeholder="Enter your password"
+                                    required
+                                >
+                                <button type="button" class="toggle-password" id="togglePassword">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="input-glow"></div>
+                        </div>
+
+                        <!-- Remember Me -->
+                        <div class="form-remember">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">Remember me</label>
+                        </div>
+
+                        <!-- Login Button -->
+                        <button type="submit" class="login-button">
+                            <span>Login</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+
+                    <!-- Links -->
+                    <div class="form-links">
+                        <a href="#" class="link-text register-link">
+                            <i class="fas fa-user-plus"></i> Create an account
+                        </a>
+                        <span class="link-divider">|</span>
+                        <a href="#" class="link-text forgot-link">
+                            <i class="fas fa-key"></i> Forgot Password?
+                        </a>
+                    </div>
+
+                    <!-- Demo Info -->
+                    <div class="demo-info">
+                        <p><strong>Demo Credentials:</strong></p>
+                        <p>Email: <code>Parking@parkease.com</code></p>
+                        <p>Password: <code>Park123</code></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation to About Page -->
+        <div class="nav-buttons">
+            <button class="nav-button next-btn" id="goToAbout">
+                About Us <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Page 2: About Us Section -->
+    <section class="about-section" id="aboutPage" style="display: none;">
+        <div class="about-container">
+            <!-- Header -->
+            <div class="about-header">
+                <h2 class="about-title">About ParkEase</h2>
+                <div class="title-underline"></div>
+                <p class="about-subtitle">Revolutionizing Urban Parking Management</p>
+            </div>
+
+            <!-- Content Row -->
+            <div class="about-content">
+                <!-- Left: Text Content -->
+                <div class="about-text">
+                    <div class="about-section-item">
+                        <h3>Find Parking with Ease</h3>
+                        <p>
+                            ParkEase uses advanced real-time tracking to help you discover available parking slots 
+                            instantly. No more circling around looking for a spot. Our intelligent system shows you 
+                            exactly where to go.
+                        </p>
+                    </div>
+
+                    <div class="about-section-item">
+                        <h3>Real-Time Availability</h3>
+                        <p>
+                            Monitor parking lot capacity in real-time. Our sensors and smart technology provide 
+                            up-to-the-minute updates on parking availability across all connected locations in your area.
+                        </p>
+                    </div>
+
+                    <div class="about-section-item">
+                        <h3>Seamless Experience</h3>
+                        <p>
+                            From finding a spot to payment, ParkEase streamlines every step of your parking journey. 
+                            A modern, intuitive interface makes parking management effortless and convenient for everyone.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Illustrations -->
+                <div class="about-illustrations">
+                    <div class="illustration-card parking-lot-illust">
+                        <i class="fas fa-square-parking"></i>
+                        <h4>Smart Parking Lots</h4>
+                    </div>
+
+                    <div class="illustration-card map-illust">
+                        <i class="fas fa-map-location-dot"></i>
+                        <h4>GPS Navigation</h4>
+                    </div>
+
+                    <div class="illustration-card tech-illust">
+                        <i class="fas fa-microchip"></i>
+                        <h4>IoT Technology</h4>
+                    </div>
+
+                    <div class="illustration-card payment-illust">
+                        <i class="fas fa-mobile-screen"></i>
+                        <h4>Mobile Payments</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="features-section">
+                <h3 class="features-title">Our Features</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h4>Lightning Fast</h4>
+                        <p>Get parking information in milliseconds</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h4>Secure & Safe</h4>
+                        <p>Enterprise-grade security for your data</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4>Global Access</h4>
+                        <p>Works across multiple cities and regions</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Smart Analytics</h4>
+                        <p>Track parking trends and patterns</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="nav-buttons">
+            <button class="nav-button prev-btn" id="goToLogin">
+                <i class="fas fa-chevron-left"></i> Back to Login
+            </button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

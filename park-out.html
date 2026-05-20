@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park-Out - ParkEase</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="form-card">
+    <h2>Process Vehicle Checkout & Payment</h2>
+    
+    <div class="search-section">
+        <div class="search-group">
+            <input type="text" id="searchTicket" class="form-input" placeholder="Search by Ticket Number or Plate Number">
+            <button type="button" id="searchBtn" class="btn btn-primary">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+    </div>
+
+    <div id="parkedVehiclesList" class="parked-vehicles-list">
+        <!-- Parked vehicles will be listed here -->
+    </div>
+
+    <form id="parkOutForm" class="admin-form" style="display: none;">
+        <h3>Checkout Details</h3>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label>Ticket Number</label>
+                <input type="text" id="outTicketNumber" class="form-input" readonly>
+            </div>
+            <div class="form-group">
+                <label>Plate Number</label>
+                <input type="text" id="outPlateNumber" class="form-input" readonly>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Owner Name</label>
+                <input type="text" id="outOwnerName" class="form-input" readonly>
+            </div>
+            <div class="form-group">
+                <label>Vehicle Type</label>
+                <input type="text" id="outVehicleType" class="form-input" readonly>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Assigned Slot</label>
+                <input type="text" id="outSlot" class="form-input" readonly>
+            </div>
+            <div class="form-group">
+                <label>Time In</label>
+                <input type="text" id="outTimeIn" class="form-input" readonly>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Time Out</label>
+                <input type="text" id="outTimeOut" class="form-input" readonly>
+            </div>
+            <div class="form-group">
+                <label>Parking Fee (Fixed)</label>
+                <input type="text" id="outFee" class="form-input" value="₱50" readonly>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-check-circle"></i> Process Payment & Checkout
+            </button>
+            <button type="button" class="btn btn-secondary" id="clearParkOutBtn">
+                <i class="fas fa-times-circle"></i> Clear
+            </button>
+        </div>
+        </form>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="park-out.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+/* Parking Slots Styling */
+
+.slots-info {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.slots-info h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 22px;
+    border-bottom: 2px solid #4DA3FF;
+    padding-bottom: 15px;
+}
+
+.slots-stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.stat-label {
+    color: #777;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.stat-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.stat-value.available {
+    color: #2ecc71;
+}
+
+.stat-value.occupied {
+    color: #e74c3c;
+}
+
+.slots-legend {
+    display: flex;
+    gap: 30px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.legend-color {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 2px solid #ddd;
+}
+
+.legend-color.available {
+    background-color: #2ecc71;
+}
+
+.legend-color.occupied {
+    background-color: #e74c3c;
+}
+
+/* Slots Grid */
+.slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 10px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    user-select: none;
+}
+
+.slot.available {
+    background-color: #2ecc71;
+    color: #000;
+}
+
+.slot.available:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+}
+
+.slot.occupied {
+    background-color: #e74c3c;
+    color: #000;
+}
+
+.slot.occupied:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.slot:active {
+    transform: scale(0.98);
+}
+
+/* Tooltip on hover */
+.slot[data-ticket]:hover::after {
+    content: attr(data-ticket);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    white-space: nowrap;
+    bottom: -30px;
+    font-weight: 400;
+    z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .slots-grid {
+        grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .slots-grid {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+        gap: 8px;
+        padding: 15px;
+    }
+    
+    .slot {
+        height: 50px;
+        font-size: 11px;
+    }
+    
+    .slots-stats {
+        gap: 15px;
+    }
+    
+    .slots-legend {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}

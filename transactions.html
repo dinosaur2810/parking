@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions - ParkEase</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="transactions-header">
+    <h2>Transaction Logs</h2>
+    <div class="transaction-filters">
+        <select id="filterStatus" class="form-input">
+            <option value="">All Status</option>
+            <option value="Pending Checkout">Pending Checkout</option>
+            <option value="Completed">Completed</option>
+        </select>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Ticket #</th>
+                <th>Plate Number</th>
+                <th>Owner Name</th>
+                <th>Slot</th>
+                <th>Time In</th>
+                <th>Time Out</th>
+                <th>Fee</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="transactionTableBody">
+            <tr>
+                <td colspan="8" class="empty-message">No transactions yet</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="transactions.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - ParkEase</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="settings-container">
+    <h2>System Settings</h2>
+    
+    <div class="settings-section">
+        <h3>Parking Configuration</h3>
+        <div class="setting-item">
+            <label>Total Parking Slots</label>
+            <input type="text" class="form-input" value="100" readonly>
+        </div>
+        <div class="setting-item">
+            <label>Fixed Parking Fee</label>
+            <input type="text" class="form-input" value="₱50" readonly>
+        </div>
+        <div class="setting-item">
+            <label>System Status</label>
+            <div class="status-badge active">Active</div>
+        </div>
+    </div>
+
+    <div class="settings-section">
+        <h3>Admin Information</h3>
+        <div class="setting-item">
+            <label>Admin ID</label>
+            <input type="text" class="form-input" value="5" readonly>
+        </div>
+        <div class="setting-item">
+            <label>Admin Name</label>
+            <input type="text" class="form-input" value="Administrator" readonly>
+        </div>
+        <div class="setting-item">
+            <label>System Version</label>
+                <input type="text" class="form-input" value="1.0.0" readonly>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>

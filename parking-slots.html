@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Slots - ParkEase</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="slots-info">
+        <h2>Parking Slots Status</h2>
+        <div class="slots-stats">
+            <div class="stat-item">
+                <span class="stat-label">Total Slots:</span>
+                <span class="stat-value" id="totalSlotsCount">100</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Occupied:</span>
+                <span class="stat-value occupied" id="occupiedCount">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Available:</span>
+                <span class="stat-value available" id="availableCount">100</span>
+            </div>
+        </div>
+        <div class="slots-legend">
+            <div class="legend-item">
+                <div class="legend-color available"></div>
+                <span>Available</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color occupied"></div>
+                <span>Occupied</span>
+            </div>
+        </div>
+    </div>
+    <div class="slots-grid" id="slotsGrid">
+        <!-- Slots will be generated dynamically -->
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="parking-slots.js"></script>
+</body>
+</html>
