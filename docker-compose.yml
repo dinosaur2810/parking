@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  parkingapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: parking-app
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - TZ=UTC
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+    restart: unless-stopped
+    networks:
+      - parking-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/index.html"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+networks:
+  parking-network:
+    driver: bridge
